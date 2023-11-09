@@ -3,6 +3,7 @@ package com.example.pessoa.controller;
 import com.example.pessoa.entity.Product;
 import com.example.pessoa.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -14,8 +15,8 @@ public class ProductController {
     private ProductService service;
 
     @PostMapping("/product")
-    public Product addProduct(@RequestBody Product product) {
-        return service.saveProduct(product);
+    public ResponseEntity<Product> addProduct(@RequestBody Product product) {
+        return ResponseEntity.status(201).body(service.saveProduct(product));
     }
 
     @GetMapping("/product")
