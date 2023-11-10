@@ -24,9 +24,8 @@ public class ProductService {
         return repository.findById(id);
     }
 
-    public String deleteProduct(Long id) {
+    public void deleteProduct(Long id) {
         repository.deleteById(id);
-        return "product removed !! " + id;
     }
 
     public Product updateProduct(Product product) {
@@ -35,6 +34,4 @@ public class ProductService {
         existingProduct.setPrice(product.getPrice());
         return repository.save(existingProduct);
     }
-
-
 }
