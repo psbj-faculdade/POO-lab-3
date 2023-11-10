@@ -1,5 +1,8 @@
 # API de Gerenciamento de Produtos
 
+### ALUNOS:
+Paulo Sergio Barbosa Junior - RA: 202111362
+
 Esta é uma API de gerenciamento de produtos implementada em Java com o framework Spring Boot. Ela permite criar, listar, buscar, atualizar e excluir produtos. A implementação é para fins de teste e não requer um banco de dados, usando armazenamento em memória para persistência.
 
 ## Rotas
